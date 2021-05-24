@@ -7,11 +7,11 @@ phases:
       - ./gradlew build
   post_build:
     commands:
-      - echo $(basename ./build/libs/*.jar)
+      - echo $(basename ./app/build/libs/*.jar)
       - pwd
 artifacts:
   files:
-    - /app/build/libs/*.jar
+    - ./app/build/libs/*.jar
   discard-paths: yes
 cache:
   paths:

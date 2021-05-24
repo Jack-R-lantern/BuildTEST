@@ -5,13 +5,13 @@ phases:
       - echo Build Starting on `date`
       - chmod +x ./gradlew
       - ./gradlew build
-    post_build:
-      commands:
-        - echo $(basename ./build/libs/*.jar)
-        - pwd
+  post_build:
+    commands:
+      - echo $(basename ./build/libs/*.jar)
+      - pwd
 artifacts:
   files:
-    - build/libs/*.jar
+    - /app/build/libs/*.jar
   discard-paths: yes
 cache:
   paths:

@@ -13,12 +13,10 @@ phases:
     commands:
       - echo Terraform apply....
       - terraform apply -auto-approve
-    finally:
-      - echo Terraform apply failed.
   post_build:
     commands:
       - echo $(basename ./terraform.tfstate)
 artifacts:
   files:
     - ./terraform.tfstate
-  discard-paths: yes
+  discard-paths: no

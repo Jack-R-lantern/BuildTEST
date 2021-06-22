@@ -13,12 +13,10 @@ phases:
     commands:
       - echo Terraform destroy....
       - terraform destroy -auto-approve
-    finally:
-      - echo Terraform destroy failed.
   post_build:
     commands:
       - echo $(basename ./terraform.tfstate)
 artifacts:
   files:
     - ./terraform.tfstate
-  discard-paths: yes
+  discard-paths: no

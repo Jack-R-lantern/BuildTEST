@@ -4,7 +4,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "GitOps-Terraform"
+    bucket = "gitops-terraform"
     key = "./terraform.tfstate"
     region = "ap-northeast-2"
     encrypt = true
@@ -13,7 +13,7 @@ terraform {
 }
 
 resource "aws_s3_bucket" "GitOps_Terraform" {
-  bucket = "GitOps-Terraform"
+  bucket = "gitops-terraform"
   force-destroy = true
   versioning {
     enabled = true

@@ -1,0 +1,24 @@
+version: 0.2
+env:
+  parameter-store:
+    AWS_ACCESS_KEY_ID: "DevOps_ACCESS_KEY_ID"
+    AWS_SECRET_ACCESS_KEY: "DevOps_SECRET_ACCESS_KEY"
+phases:
+  pre_build:
+    commands:
+      - echo Terraform init
+      - terraform init
+      - env
+  build:
+    commands:
+      - echo Terraform destroy....
+      - terraform destroy -auto-approve
+    finally:
+      - echo Terraform destroy failed.
+  post_build:
+    commands:
+      - echo $(basename ./terraform.tfstate)
+artifacts:
+  files:
+    - ./terraform.tfstate
+  discard-paths: yes

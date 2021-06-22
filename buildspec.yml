@@ -3,7 +3,7 @@ env:
   parameter-store:
     AWS_ACCESS_KEY_ID: "DevOps_ACCESS_KEY_ID"
     AWS_SECRET_ACCESS_KEY: "DevOps_SECRET_ACCESS_KEY"
-phase:
+phases:
   # install:
   #   commands:
   #     - echo Install Terraform...

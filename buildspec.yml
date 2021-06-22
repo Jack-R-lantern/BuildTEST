@@ -30,5 +30,7 @@ phase:
 artifacts:
   files:
     - ./terraform.tfstate
-
+  discard-paths: yes
 cache:
+  paths:
+    - '/root/**/*

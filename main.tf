@@ -8,7 +8,7 @@ terraform {
     key = "./terraform.tfstate"
     region = "ap-northeast-2"
     encrypt = true
-    aws_dynamodb_talble = "terraform_lock"
+    aws_dynamodb_table = "terraform_lock"
   }
 }
 

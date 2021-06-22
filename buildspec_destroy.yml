@@ -6,6 +6,8 @@ env:
 phases:
   pre_build:
     commands:
+      - terraform init
+      - terraform refresh
       - env
   build:
     commands:

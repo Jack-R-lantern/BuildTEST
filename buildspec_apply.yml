@@ -4,15 +4,6 @@ env:
     AWS_ACCESS_KEY_ID: "DevOps_ACCESS_KEY_ID"
     AWS_SECRET_ACCESS_KEY: "DevOps_SECRET_ACCESS_KEY"
 phases:
-  # install:
-  #   commands:
-  #     - echo Install Terraform...
-  #     - sudo apt-get update
-  #     - sudo apt-get install wget unzip
-  #     - sudo wget https://releases.hashicorp.com/terraform/1.0.0/terraform_1.0.0_linux_amd64.zip
-  #     - sudo unzip ./terraform_1.0.0_linux_amd64.zip -d /usr/local/bin
-  #   finally:
-  #     - echo Failed Install Terraform...
   pre_build:
     commands:
       - echo Terraform init

@@ -16,10 +16,3 @@ phases:
   post_build:
     commands:
       - echo $(basename ./terraform.tfstate)
-artifacts:
-  files:
-    - ./terraform.tfstate
-  discard-paths: yes
-cache:
-  paths:
-    - '/root/terraform.tfstate'
